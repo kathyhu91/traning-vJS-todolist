@@ -964,20 +964,15 @@ button {
   font-size: 14px;
   line-height: 1.5;
   padding: 3px 6px;
+  color: #333333;
 }
 .todo__edit__btn:hover {
   border-radius: 10px;
-  color: #ffffff;
-}
-.todo__edit__btn--save {
-  color: #74bca1;
 }
 .todo__edit__btn--save:hover {
-  background-color: #74bca1;
-}
-.todo__edit__btn--cancel {
-  color: #d87355;
+  background-color: #ffd370;
 }
 .todo__edit__btn--cancel:hover {
+  color: #ffffff;
   background-color: #d87355;
 }/*# sourceMappingURL=all.css.map */

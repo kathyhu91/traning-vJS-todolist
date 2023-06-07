@@ -1,4 +1,3 @@
-console.clear();
 // 0
 import {
   checkUrl,
@@ -326,7 +325,7 @@ const account = {
   removeToken() {
     localStorage.removeItem("Authorization");
     localStorage.removeItem("nickname");
-    setTimeout("location.href='../pages/login.html'", 500);
+    setTimeout("window.location.href='../pages/login.html'", 500);
   },
 };
 

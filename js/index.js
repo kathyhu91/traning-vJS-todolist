@@ -1,5 +1,6 @@
 init();
 function init() {
   //   跳轉
-  setTimeout("location.href='../pages/login.html'", 100);
+
+  setTimeout("window.location.href ='pages/login.html'", 100);
 }

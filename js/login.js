@@ -1,4 +1,3 @@
-console.clear();
 // 0
 import { loginUrl } from "./api.js";
 import { validateRule, errMsg } from "./accountRule.js";
@@ -84,7 +83,7 @@ function sendLoginData(data) {
       localStorage.setItem("nickname", res.data.nickname);
       alert(res.data.message);
       //   跳轉
-      setTimeout("location.href='../pages/todoList.html'", 500);
+      setTimeout("window.location.href='../pages/todoList.html'", 500);
     })
     .catch((err) => {
       alert(err?.response?.data?.message)

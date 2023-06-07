@@ -104,20 +104,19 @@ $todo__main__width--md: 500px;
       font-size: map-get($font-sizes, 1);
       line-height: map-get($line-heights, md);
       padding: 3px 6px;
-      
+      color: map-get($themes-colors, normal);
       &:hover { 
         border-radius: $border-radius--base;
-        color: map-get($themes-colors, pure-white);
+        
       }
-      &--save {
-        color: map-get($themes-colors, success);
+      &--save { 
         &:hover {
-          background-color: map-get($themes-colors, success);
+          background-color: map-get($themes-colors, primary);
         }
       }
       &--cancel {
-        color: map-get($themes-colors, danger);
         &:hover {
+          color: map-get($themes-colors, pure-white);
           background-color: map-get($themes-colors, danger);
         }
       }

@@ -1,4 +1,3 @@
-console.clear();
 // 0
 import { registerUrl } from "./api.js";
 import { validateRule, errMsg } from "./accountRule.js";
@@ -94,7 +93,7 @@ function sendRegisterData(data) {
     .then((res) => {
       alert(res.data.message);
       // 頁面跳轉
-      setTimeout("location.href='../pages/login.html'", 1500);
+      setTimeout("window.location.href='../pages/login.html'", 500);
     })
     .catch((err) => alert(err.response.data.message));
 }
