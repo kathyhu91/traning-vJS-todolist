@@ -33,7 +33,7 @@ function validateData() {
   // 驗證
   inputAll.forEach((item) => {
     const itemType = item.dataset.type;
-    const itemValue = item.value;
+    const itemValue = item.value.trim();
     const msg = document.querySelector(`[data-msg=${itemType}]`);
     // 空值
     if (itemValue.length === 0) {

@@ -30,8 +30,8 @@ function login(e) {
 function validateData() {
   console.log("validateData")
   // dom
-  const emailValue = document.querySelector("#login-email").value;
-  const passwordValue = document.querySelector("#login-password").value;
+  const emailValue = document.querySelector("#login-email").value.trim();
+  const passwordValue = document.querySelector("#login-password").value.trim();
   const emailErrMsg = document.querySelector("[data-msg='email']");
   const passwordErrMsg = document.querySelector("[data-msg='password']");
   

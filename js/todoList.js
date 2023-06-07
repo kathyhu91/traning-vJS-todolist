@@ -254,7 +254,7 @@ const event = {
     e.preventDefault();
     const target = e.target;
     if (target.getAttribute("id") !== "addTodoBtn") return;
-    const todoValue = document.querySelector("#todo_input").value;
+    const todoValue = document.querySelector("#todo_input").value.trim();
     if (todoValue.length === 0) {
       return alert("請先輸入待辦事項");
     }
@@ -304,7 +304,7 @@ const event = {
     api.delAllTodos(todosId);
   },
   editTodo(targetId) {
-    const todoValue = document.querySelector(`[data-type="editInput"]`).value;
+    const todoValue = document.querySelector(`[data-type="editInput"]`).value.trim();
     if (todoValue.length === 0) {
       return alert("請先輸入修改內容");
     }
