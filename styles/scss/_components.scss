@@ -1,0 +1,260 @@
+// %input-base {
+.form {
+  &__content {
+    @include d-flex(column, center, center);
+  }
+  &__item {
+    @include d-flex(column, center, flex-start);
+    @include margin(bottom, 16px);
+    // min-width: 304px;
+  }
+  &__label {
+    margin-bottom: 0.25 * $spacer--base; //4
+    font-size: map-get($font-sizes, 1);
+  }
+  &__input {
+    width: 100%;
+    padding: 12px 16px;
+    @include d-flex(row, flex-start, center);
+    background-color: map-get($themes-colors, pure-white);
+    border: none;
+    border-radius: $border-radius--base;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    color: map-get($themes-colors, normal);
+    font-size: map-get($font-sizes, 2);
+    &::placeholder {
+      color: map-get($themes-colors, secondary);
+    }
+    &--wrong {
+      margin-top: $spacer--base * 0.1875; //3
+      color: map-get($themes-colors, danger);
+      font-size: map-get($font-sizes, 1);
+      line-height: 20px;
+    }
+  }
+}
+
+.tab {
+  &__list {
+    @include d-flex(row, space-evenly, center);
+    color: map-get($themes-colors, secondary);
+    font-size: map-get($font-sizes, 1);
+  }
+  &__item {
+    padding: $spacer--base;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid map-get($themes-colors, light);
+    cursor: pointer;
+    &:hover {
+      border-bottom: 2px solid map-get($themes-colors, normal);
+      color: map-get($themes-colors, normal);
+      transition: 0.5s ease-in-out 0.1s;
+    }
+    &.active {
+      border-bottom: 2px solid map-get($themes-colors, normal);
+      color: map-get($themes-colors, normal);
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  margin: 0 auto;
+  background: map-get($themes-colors, pure-white);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  border-radius: $border-radius--base;
+  &__list {
+    padding: 5px 17px 0px 16px;
+    @include media-breakpoint--md {
+      padding-left: 24px;
+    }
+  }
+  &__wrap {
+    cursor: pointer;
+    border-bottom: 1px solid map-get($themes-colors, matte);
+  }
+  &__item {
+    @include d-flex(row, space-between, center);
+    
+    &__btn {
+      &--edit {
+        width: map-get($font-sizes, 1);
+        height: map-get($font-sizes, 1);
+        background-color: map-get($themes-colors, pure-white);
+        background-image: $icon-edit;
+        background-size:map-get($font-sizes, 1) map-get($font-sizes, 1);
+        color: map-get($themes-colors, normal);
+        transform: translateY(-50%);
+        opacity: 0;
+        @include margin(right, 4px);
+        @include margin(top, 20px);
+      }
+      &--del {
+        width: map-get($font-sizes, 1);
+        height: map-get($font-sizes, 1);
+        background: map-get($themes-colors, pure-white);
+        background-image: $icon-delete;
+        color: map-get($themes-colors, normal);
+        transform: translateY(-50%);
+        opacity: 0;
+        @include margin(top, 20px);
+      }
+    }
+    &:hover &__btn--del {
+      opacity: 1;
+    }
+    &:hover &__btn--edit {
+      opacity: 1;
+    }
+  }
+  &__label {
+    position: relative;
+    width: 100%;
+    padding-top: map-get($spacer, 4);
+    padding-bottom: map-get($spacer, 4);
+    user-select: none;
+    cursor: pointer;
+    @include media-breakpoint--md {
+      
+      max-width: 428px;
+    }
+  }
+  &__text {
+    @include margin(left, 36px);
+    color: map-get($themes-colors, normal);
+    font-weight: map-get($font-weights, 400);
+    font-size: map-get($font-sizes, 1);
+    line-height: map-get($line-heights, md);
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%) scale(1);
+      height: 20px;
+      width: 20px;
+      border-radius: 5px;
+      border: 1px solid map-get($themes-colors, normal);
+      pointer-events: none;
+      transition: 0.3s ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: 20.52px;
+      transform: rotate(45deg);
+      height: 15px;
+      width: 0.5rem;
+      border-radius: 1px;
+      border-bottom: 3px solid map-get($themes-colors, primary);
+      border-right: 3px solid map-get($themes-colors, primary);
+      pointer-events: none;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+  }
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    &:checked {
+      ~span {
+        color: map-get($themes-colors, secondary );
+        text-decoration: line-through;
+      }
+      ~span::before {
+        border-color: transparent;
+        transform: translateY(-50%) scale(0);
+      }
+      ~span::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__footer {
+    @include d-flex(row, space-between, center);
+    padding: map-get($spacer, 4);
+    padding-right: 17px;
+    color: map-get($themes-colors, normal);
+    font-weight: map-get($font-weights, 400);
+    font-size: map-get($font-sizes, 1);
+    line-height: map-get($line-heights, md);
+    @include media-breakpoint--md {
+      padding-left: map-get($spacer, 6);
+    }
+    &__item {
+      color: map-get($themes-colors, normal);
+      font-size: map-get($font-sizes, 1);
+      font-weight: map-get($font-weights, 400);
+      &--del {
+        color: map-get($themes-colors, secondary);
+        cursor: pointer;
+        &:hover {
+          color: map-get($themes-colors, danger);
+        }
+        @include media-breakpoint--md {
+          @include margin(right, 31px);
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  @include margin(top, 11px);
+  padding: 12px 48px;
+  text-align: center;
+  background: map-get($themes-colors, normal);
+  border-radius: $border-radius--base;
+  color: map-get($themes-colors, pure-white);
+  font-weight: map-get($font-weights, 700);
+  font-size: map-get($font-sizes, 2);
+  @include media-breakpoint--md {
+    @include margin(top, 8 px);
+  }
+  &:hover {
+    color: map-get($themes-colors, normal);
+    background: map-get($themes-colors, pure-white);
+    border: 0;
+  }
+  &__add {
+    @include d-flex(row,center,center);
+    padding: 0;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    font-size: map-get($font-sizes, 3);
+  }
+}
+
+.link {
+  color: map-get($themes-colors, normal);
+  font-weight: map-get($font-weights, 700);
+  font-size: map-get($font-sizes, 2);
+  line-height: map-get($line-heights, md);
+  &:hover {
+    color: map-get($themes-colors, pure-white);
+  }
+  &--sm {
+    //   登出
+    display: inline-block;
+    font-size: map-get($font-sizes, 1);
+    font-weight: map-get($font-weights, 400);
+    @include media-breakpoint--md {
+      font-size: map-get($font-sizes, 2);
+    }
+    &:hover {
+      color: map-get($themes-colors, pure-white);
+    }
+  }
+}

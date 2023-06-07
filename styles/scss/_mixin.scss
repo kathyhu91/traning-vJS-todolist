@@ -1,0 +1,29 @@
+@mixin logo--lg {
+  background: $logo--lg;
+  width: 312.6px;
+  height: 46.89px;
+}
+@mixin logo--sm {
+  background: $logo--sm;
+  width: 242.51px;
+  height: 38.45px;
+}
+@mixin nav__brand {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+@mixin margin($direction,$spacer) {
+  margin-#{$direction}: $spacer;
+}
+@mixin padding($direction,$spacer) {
+  padding-#{$direction}: $spacer;
+}
+
+@mixin d-flex($direction,$justify-content,$align-items) {
+  display: flex;
+  flex-direction:$direction ;
+  justify-content:$justify-content;
+  align-items:$align-items;
+}

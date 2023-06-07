@@ -1,0 +1,36 @@
+.h1 {
+  color: map-get($themes-colors, $normal);
+  font-weight: map-get($font-weights, 700);
+  font-size: map-get($font-sizes, 5);
+  line-height: 50px;
+  &__brand {
+    background-image: $logo--lg;
+    @include nav__brand;
+    &--sm {
+      background-image: $logo--sm;
+      @include nav__brand;
+    }
+  }
+}
+
+.h2 {
+  text-align: center;
+  color: map-get($themes-colors, $normal);
+  font-weight: map-get($font-weights, 700);
+  font-size: map-get($font-sizes, 4);
+  line-height: map-get($line-heights, md);
+}
+.h3 {
+  text-align: center;
+  color: map-get($themes-colors, $normal);
+  font-weight: map-get($font-weights, 700);
+  font-size: map-get($font-sizes, 3);
+  line-height: map-get($line-heights, md);
+}
+
+.h4 {
+  color: map-get($themes-colors, $normal);
+  font-weight: map-get($font-weights, 700);
+  font-size: map-get($font-sizes, 2);
+  line-height: map-get($line-heights, md);
+}

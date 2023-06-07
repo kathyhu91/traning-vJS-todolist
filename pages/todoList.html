@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="/styles/css/all.css" />
+    <title>List Board｜ONLINE TODO LIST (JS)</title>
+</head>
+
+<body class="bg-secondary">
+    <div class="container">
+        <header class="todo__header">
+            <a href="./login.html">
+                <h1 class="h1 h1__brand--sm todo__h1">ONLINE TODO LIST</h1>
+            </a>
+            <div class="todo__header__nav">
+                <h4 class="h4 todo__h4"><span id="userName"></span>的代辦</h4>
+                <a href="" class="link link--sm" id="logoutBtn">登出</a>
+            </div>
+        </header>
+        <main class="todo__main">
+            <div class="todo__form__wrap">
+                <input type=" text" name="todo_input" id="todo_input" placeholder="新增待辦事項"
+                       class="form__input todo__form__input" />
+                <button type="button" class="btn btn__add todo__form__btn" id="addTodoBtn">＋</button>
+            </div>
+            <div class="" id="todoBoard">
+                <div class="card todo__card" id="todoCard">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<script type="module" src="../js/todoList.js"></script>
+
+</html>

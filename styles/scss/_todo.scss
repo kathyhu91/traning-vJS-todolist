@@ -1,0 +1,126 @@
+$todo__main__width--sm: 313px;
+$todo__main__width--md: 500px;
+
+.bg-secondary {
+  @include media-breakpoint--md {
+    background: $media-md__bg-img;
+  }
+}
+
+.todo {
+  &__header {
+    @include d-flex(row, space-between, center);
+    @include margin(top, 17.45px);
+    @include margin(bottom, 16.55px);
+    @include media-breakpoint--md {
+      @include margin(bottom, 40.55px);
+    }
+    &__nav {
+      @include d-flex(row, flex-end, center);
+    }
+  }
+  &__main {
+    width: 100%;
+    max-width: $todo__main__width--md;
+    margin: 0 auto;
+  }
+  &__h1 {
+    width: 242.51px;
+    height: 38.45px;
+  }
+  &__h4 {
+    display: none;
+    @include media-breakpoint--md {
+      display: block;
+      @include margin(right, 24px);
+    }
+  }
+  &__form {
+    &__wrap {
+      @include d-flex(row, space-between, center);
+      align-items: center;
+      min-width: $todo__main__width--sm;
+      height: 47px;
+      background-color: map-get($themes-colors, pure-white);
+      border-radius: $border-radius--base;
+      @include media-breakpoint--md {
+        max-width: $todo__main__width--md;
+      }
+    }
+    &__input {
+      display: block;
+      width: 90%;
+      background-color: map-get($themes-colors, pure-white);
+      box-shadow: 0;
+      @include margin(left, 2px);
+      &::placeholder {
+        font-weight: map-get($font-weights, 400);
+      }
+    }
+    &__btn {
+      display: block;
+      margin: 0px;
+      @include margin(right, 4px);
+      &:hover {
+        background-color: map-get($themes-colors, primary);
+      }
+    }
+  }
+  &__card {
+    @include margin(top, 16px);
+  }
+  &__none {
+    @include d-flex(column, center, center);
+    &__text {
+      font-size: map-get($font-sizes, 1);
+      font-weight: map-get($font-weights, 400);
+      line-height: map-get($line-heights, md);
+      @include margin(top, 60px);
+    }
+    &__img {
+      @include margin(top, 16px);
+    }
+  }
+  &__edit {
+    display: none;
+    &__container {
+      @include d-flex(row, space-between, center);
+      @include margin(top, 6px);
+      @include margin(bottom, 8px);
+    }
+    &__input {
+      max-width: 60%;
+      font-size: 14px;
+      padding: 8px;
+      @include margin(left, 8px);
+      background-color: map-get($themes-colors, primary);
+      opacity: 0.5;
+      &::placeholder {
+        color: map-get($themes-colors, normal );
+      }
+    }
+    &__btn {
+      font-weight: map-get($font-weights, 400);
+      font-size: map-get($font-sizes, 1);
+      line-height: map-get($line-heights, md);
+      padding: 3px 6px;
+      
+      &:hover { 
+        border-radius: $border-radius--base;
+        color: map-get($themes-colors, pure-white);
+      }
+      &--save {
+        color: map-get($themes-colors, success);
+        &:hover {
+          background-color: map-get($themes-colors, success);
+        }
+      }
+      &--cancel {
+        color: map-get($themes-colors, danger);
+        &:hover {
+          background-color: map-get($themes-colors, danger);
+        }
+      }
+    }
+  }
+}

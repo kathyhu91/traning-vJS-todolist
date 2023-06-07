@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="/styles/css/all.css" />
+    <title>Sign Up｜ONLINE TODO LIST (JS)</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-6">
+                    <header class="account__header">
+                        <a href="">
+                            <h1 class="h1 h1__brand account__h1 register__h1">
+                                ONLINE TODO LIST
+                            </h1>
+                        </a>
+                        <img src="../assets/main.png" alt="" class="account__header__img" />
+                    </header>
+                </div>
+                <div class="col-4">
+                    <main class="account__main register__main">
+                        <div class="form" id="register-form">
+                            <h2 class="h2 account__h2">註冊帳號</h2>
+                            <form class="form--content">
+                                <div class="form__item">
+                                    <label class="form__label" for="register-email">Email</label>
+                                    <input type="email" class="form__input account__form__input" id="register-email"
+                                           data-type="email" placeholder="請輸入Email" name="email" />
+                                    <p class="form__input--wrong" data-msg="email"></p>
+                                </div>
+                                <div class="form__item">
+                                    <label class="form__label" for="register-nickname">暱稱</label>
+                                    <input type="text" class="form__input account__form__input" id="register-nickname"
+                                           data-type="nickname" placeholder="請輸入暱稱" name="nickname" />
+                                    <p class="form__input--wrong" data-msg="nickname"></p>
+                                </div>
+                                <div class="form__item">
+                                    <label class="form__label" for="register-password">密碼</label>
+                                    <input type="password" class="form__input account__form__input"
+                                           id="register-password" data-type="password" placeholder="請輸入密碼"
+                                           name="password" />
+                                    <p class="form__input--wrong" data-msg="password"></p>
+                                </div>
+                                <div class="form__item">
+                                    <label class="form__label" for="register-password-check">再次輸入密碼</label>
+                                    <input type="password" class="form__input account__form__input"
+                                           id="register-password-check" data-type="password-check" placeholder="請再次輸入密碼"
+                                           name="password" />
+                                    <p class="form__input--wrong" data-msg="password-check"></p>
+                                </div>
+                            </form>
+                            <div class="account__footer">
+                                <button class="btn" id="registerBtn" type="button">
+                                    註冊帳號
+                                </button>
+                                <a href="./login.html" class="link account__link">登入</a>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<script type="module" src="../js/register.js"></script>
+
+</html>

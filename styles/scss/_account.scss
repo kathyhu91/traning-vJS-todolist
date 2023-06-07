@@ -1,0 +1,74 @@
+.account {
+  &__header {
+    @include d-flex(column, center, center);
+    &__img {
+      display: none;
+      @include media-breakpoint--md {
+        display: block;
+        @include margin(top, 20.59px);
+      }
+    }
+  }
+  &__main {
+    @include margin(top, 21.59px);
+  }
+  &__footer {
+    @include d-flex(column, center, center);
+    &__item {
+      display: block;
+    }
+  }
+  &__h1 {
+    @include margin(top, 48px);
+    @include media-breakpoint--md {
+      margin: 0;
+    }
+  }
+  &__h2 {
+    @include margin(bottom, 26px);
+    @include media-breakpoint--md {
+      text-align: start;
+      @include margin(bottom, 24px);
+    }
+  }
+  &__h3 {
+    @include margin(bottom, 26px);
+    @include media-breakpoint--md {
+      text-align: start;
+      font-size: map-get($font-sizes, 4);
+      @include margin(bottom, 24px);
+    }
+  }
+  &__form {
+    &__input {
+      min-width: 304px;
+      &::placeholder {
+        font-weight: map-get($font-weights, 500);
+      }
+    }
+  }
+  &__link {
+    @include margin(top, 24px);
+  }
+}
+
+.login {
+  &__main {
+    @include media-breakpoint--md {
+      @include margin(top, 62px);
+    }
+  }
+}
+
+.register {
+  &__h1 {
+    @include media-breakpoint--md {
+      @include margin(top, 30px);
+    }
+  }
+  &__main {
+    @include media-breakpoint--md {
+      @include margin(top, 0px);
+    }
+  }
+}

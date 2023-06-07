@@ -1,0 +1,59 @@
+@mixin media-breakpoint--md {
+  $width: map-get($grid-breakpoints, md);
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint--lg {
+  $width: map-get($grid-breakpoints, lg);
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint--xl {
+  $width: map-get($grid-breakpoints, xl);
+  @media (min-width: $width) {
+    @content;
+  }
+}
+.wrap{
+  height: 100vh;
+  @include media-breakpoint--md {
+    @include d-flex(row ,center,center );
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 calc($spacer--base*2);
+  @include media-breakpoint--md {
+    padding: 0 $gutter-half;
+  }
+}
+
+.row {
+  margin-left: -$gutter-half;
+  margin-right: -$gutter-half;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%col {
+  position: relative;
+  max-width: 100%;
+  padding: 0px $gutter-half;
+  flex: 0 0 100%;
+}
+@for $i from 1 through $grid-num {
+  .col-#{$i} {
+    @extend %col;
+    @include media-breakpoint--md {
+      max-width: calc(100% * ($i / $grid-num));
+      flex: 0 0 calc((100% * ($i / $grid-num))) ;
+    }
+  }
+}
+
