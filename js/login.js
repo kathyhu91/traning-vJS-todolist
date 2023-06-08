@@ -16,7 +16,6 @@ const loginData = {
 // 4
 // 4-1 觸發
 function login(e) {
-  console.log("login")
   e.preventDefault();
   const target = e.target;
   if (target.getAttribute("id") !== "login-btn") return;
@@ -28,7 +27,6 @@ function login(e) {
 
 // 4-2 表單驗證
 function validateData() {
-  console.log("validateData")
   // dom
   const emailValue = document.querySelector("#login-email").value.trim();
   const passwordValue = document.querySelector("#login-password").value.trim();

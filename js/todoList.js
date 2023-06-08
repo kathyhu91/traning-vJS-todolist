@@ -12,6 +12,7 @@ const logoutBtn = document.querySelector("#logoutBtn");
 const userName = document.querySelector("#userName");
 const todoBoard = document.querySelector("#todoBoard");
 const addTodoBtn = document.querySelector("#addTodoBtn");
+const todoInput = document.querySelector("#todo_input")
 
 // 2 data
 const token = localStorage.getItem("Authorization");
@@ -98,6 +99,7 @@ const api = {
         if (res.status == 201) {
           alert("新增成功");
           data.currentTodo = "";
+          todoInput.value = ""
           api.getTodosData();
         }
       })
@@ -254,7 +256,7 @@ const event = {
     e.preventDefault();
     const target = e.target;
     if (target.getAttribute("id") !== "addTodoBtn") return;
-    const todoValue = document.querySelector("#todo_input").value.trim();
+    const todoValue = todoInput.value.trim();
     if (todoValue.length === 0) {
       return alert("請先輸入待辦事項");
     }
