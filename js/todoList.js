@@ -15,7 +15,7 @@ const addTodoBtn = document.querySelector("#addTodoBtn");
 const todoInput = document.querySelector("#todo_input")
 
 // 2 data
-const token = localStorage.getItem("Authorization");
+const token = localStorage.getItem("Authorization") || "";
 const typeData = {
   tab: [
     { tab: "all", title: "全部" },

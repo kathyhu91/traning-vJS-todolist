@@ -79,9 +79,9 @@ $line-heights: (
 $letter-spacing: 0.07em;
 
 // other
-$logo--lg : url("/assets/logo_lg.png");
-$logo--sm : url("/assets/logo_sm.png");
+$logo--lg : url("../../assets/logo__lg.png");
+$logo--sm : url("../..//assets/logo__sm.png");
 $media-md__bg-img: linear-gradient(172.7deg, $primary 5.12%, $primary 53.33%, $primary 53.44%, $pure-white 53.45%, $pure-white 94.32%);
 $border-radius--base:10px;
-$icon-edit : url("/assets/icon--edit.png");
-$icon-delete: url("/assets/icon--delete.svg");
+$icon-edit : url("../../assets/icon--edit.png");
+$icon-delete: url("../../assets/icon--delete.png");

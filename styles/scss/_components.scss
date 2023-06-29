@@ -76,7 +76,6 @@
   }
   &__item {
     @include d-flex(row, space-between, center);
-    
     &__btn {
       &--edit {
         width: map-get($font-sizes, 1);
@@ -101,12 +100,13 @@
         @include margin(top, 20px);
       }
     }
-    &:hover &__btn--del {
-      opacity: 1;
-    }
     &:hover &__btn--edit {
       opacity: 1;
     }
+    &:hover &__btn--del {
+      opacity: 1;
+    }
+
   }
   &__label {
     position: relative;

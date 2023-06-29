@@ -258,14 +258,14 @@ button {
   line-height: 50px;
 }
 .h1__brand {
-  background-image: url("/assets/logo_lg.png");
+  background-image: url("../../assets/logo__lg.png");
   text-indent: 101%;
   overflow: hidden;
   white-space: nowrap;
   display: block;
 }
 .h1__brand--sm {
-  background-image: url("/assets/logo_sm.png");
+  background-image: url("../..//assets/logo__sm.png");
   text-indent: 101%;
   overflow: hidden;
   white-space: nowrap;
@@ -447,7 +447,7 @@ button {
   width: 14px;
   height: 14px;
   background-color: #ffffff;
-  background-image: url("/assets/icon--edit.png");
+  background-image: url("../../assets/icon--edit.png");
   background-size: 14px 14px;
   color: #333333;
   -webkit-transform: translateY(-50%);
@@ -460,17 +460,17 @@ button {
   width: 14px;
   height: 14px;
   background: #ffffff;
-  background-image: url("/assets/icon--delete.svg");
+  background-image: url("../../assets/icon--delete.png");
   color: #333333;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   opacity: 0;
   margin-top: 20px;
 }
-.card__item:hover .card__item__btn--del {
+.card__item:hover .card__item__btn--edit {
   opacity: 1;
 }
-.card__item:hover .card__item__btn--edit {
+.card__item:hover .card__item__btn--del {
   opacity: 1;
 }
 .card__label {
